@@ -1,0 +1,8 @@
+node_modules/
+.env
+npm-debug.log*
+.DS_Store
+
+# Archivos subidos por usuarios (montar un volumen persistente en producción)
+uploads/*
+!uploads/.gitkeep

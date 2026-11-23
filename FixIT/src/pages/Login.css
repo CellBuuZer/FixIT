@@ -1,0 +1,40 @@
+/* Estilos exclusivos del login. Hereda los tokens de src/index.css. */
+.fx-login { position:relative; isolation:isolate; overflow:hidden; display:grid; place-items:center; flex:1; padding:48px 20px; min-height:calc(100vh - 80px); background:#f8fafc; font-family:var(--fx-font); color:var(--fx-text); }
+.fx-login::before,.fx-login::after { content:''; position:absolute; z-index:-1; width:290px; height:290px; background:var(--fx-primary); border-radius:48px; transform:rotate(45deg); pointer-events:none; }
+.fx-login::before { bottom:-180px; left:-120px; }
+.fx-login::after { top:-185px; right:-140px; }
+.fx-login-card { width:min(100%, 590px); padding:36px 38px 28px; background:var(--fx-white,#fff); border:1px solid var(--fx-border); border-radius:24px; box-shadow:0 16px 52px rgba(24,34,53,.08); }
+.fx-login-heading { text-align:center; margin-bottom:28px; }
+.fx-login-heading h1 { font-size:clamp(24px,3vw,34px); font-weight:700; line-height:1.25; letter-spacing:-.035em; margin:0 0 8px; }
+.fx-login-heading h1 span { color:var(--fx-primary); }
+.fx-login-heading p,.fx-login-hint { color:var(--fx-muted,#59677d); font-size:13px; }
+.fx-login-tabs { display:grid; grid-template-columns:1fr 1fr; gap:5px; background:#f0f2f5; padding:4px; border-radius:14px; margin-bottom:20px; }
+.fx-login-tabs a { text-align:center; padding:12px 8px; border-radius:11px; text-decoration:none; color:var(--fx-text); font-size:14px; font-weight:600; }
+.fx-login-tabs a[aria-current] { background:var(--fx-primary); color:#fff; }
+.fx-login-roles { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:3px; border:1px solid var(--fx-border); border-radius:14px; padding:4px; }
+.fx-login-roles button { display:flex; justify-content:center; align-items:center; gap:8px; background:none; border:0; border-radius:10px; padding:12px 5px; color:var(--fx-text); font-size:12px; font-weight:500; cursor:pointer; line-height:1.4; }
+.fx-login svg { width:22px; height:22px; flex-shrink:0; }
+.fx-login-roles button[aria-pressed=true] { color:var(--fx-primary-hover); background:var(--fx-primary-soft); font-weight:600; }
+.fx-login-hint { margin:10px 0 23px; text-align:center; min-height:21px; font-size:12px; }
+.fx-login form { display:flex; flex-direction:column; }
+.fx-login form > label { font-size:13px; font-weight:600; margin-bottom:7px; }
+.fx-login-field { display:flex; align-items:center; gap:12px; border:1px solid #ccd4e0; border-radius:12px; padding:0 14px; min-height:52px; margin-bottom:19px; color:#65748a; }
+.fx-login-field:focus-within { border-color:var(--fx-primary); box-shadow:0 0 0 3px rgba(36,98,233,.13); }
+.fx-login-field input { width:100%; min-width:0; background:transparent; border:0; outline:none; box-shadow:none; font:inherit; color:var(--fx-text); padding:14px 0; }
+.fx-login-field input:focus,.fx-login-field input:focus-visible { outline:none; box-shadow:none; }
+.fx-login-field input::placeholder { color:#718096; opacity:1; }
+.fx-login-eye { display:grid; place-items:center; background:none; border:0; color:inherit; cursor:pointer; padding:8px; margin-right:-8px; }
+.fx-login-options { display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; font-size:12px; margin:2px 0 22px; }
+.fx-login-options label { display:flex; align-items:center; gap:7px; cursor:pointer; }
+.fx-login-options input { width:17px; height:17px; accent-color:var(--fx-primary); }
+.fx-login-options a,.fx-login-bottom a,.fx-login-support { color:var(--fx-primary-hover); font-weight:600; text-decoration:none; }
+.fx-login a:hover { text-decoration:underline; }
+.fx-login-submit { min-height:52px; border:0; border-radius:12px; background:var(--fx-primary); color:#fff; font-size:15px; font-weight:600; cursor:pointer; transition:background .2s; }
+.fx-login-submit:hover:not(:disabled) { background:var(--fx-primary-hover); }
+.fx-login-submit:disabled { opacity:.65; cursor:wait; }
+.fx-login-bottom { display:flex; align-items:center; gap:14px; color:var(--fx-muted,#59677d); margin-top:26px; font-size:13px; text-align:center; }
+.fx-login-bottom::before,.fx-login-bottom::after { content:''; height:1px; flex:1; background:var(--fx-border); }
+.fx-login-support { display:flex; align-items:center; justify-content:center; gap:7px; margin-top:18px; font-size:12px; }
+.fx-login-support svg { width:17px; height:17px; }
+.fx-login-error { font-size:13px; padding:12px; margin-bottom:15px; background:#fdecec; color:#a51f1f; border-radius:10px; }
+@media(max-width:540px) { .fx-login { padding:28px 14px; min-height:0; } .fx-login-card { padding:26px 18px; border-radius:18px; } .fx-login-roles button { flex-direction:column; font-size:11px; min-height:65px; } .fx-login-options { gap:10px; } .fx-login::before,.fx-login::after { width:200px; height:200px; } }

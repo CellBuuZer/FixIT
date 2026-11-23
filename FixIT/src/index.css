@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+:root {
+  --fx-font: 'Poppins', system-ui, -apple-system, sans-serif;
+  --fx-primary: #2462E9;
+  --fx-primary-hover: #194CC7;
+  --fx-primary-soft: #EEF4FF;
+  --fx-primary-border: #B9CFFF;
+  --fx-text: #182235;
+  --fx-muted: #59677D;
+  --fx-border: #DFE5EE;
+  --fx-bg: #F5F7FB;
+  --fx-soft: #F8FAFD;
+  --fx-white: #FFFFFF;
+  --fx-dark: #1E1E1E;
+  --fx-shadow: 0 4px 18px rgba(24,34,53,.045);
+  --fx-radius: 16px;
+  font-family: var(--fx-font);
+  color: var(--fx-text);
+  background: var(--fx-bg);
+  color-scheme: light;
+}
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
+html, body, #root { width: 100%; min-height: 100vh; background: var(--fx-bg); font-family: var(--fx-font); }
+body { line-height: 1.6; font-size: 14px; -webkit-font-smoothing: antialiased; }
+button, input, select, textarea { font-family: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid var(--fx-primary); outline-offset: 3px; }
+input[type=checkbox], input[type=radio] { accent-color: var(--fx-primary); }
+button:disabled { cursor: not-allowed; }
+::selection { background: var(--fx-primary-soft); color: var(--fx-primary-hover); }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
+
+/* Shared primary action, used across pages. */
+.btn-primary { background:var(--fx-primary); color:white; border:0; border-radius:10px; padding:12px 18px; font-size:.95rem; font-weight:600; cursor:pointer; text-decoration:none; transition:background .2s ease; }
+.btn-primary:hover:not(:disabled) { background:var(--fx-primary-hover); }
+.btn-primary:disabled { opacity:.55; cursor:not-allowed; }

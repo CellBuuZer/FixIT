@@ -1,0 +1,219 @@
+/* COMPONENTE: BARRA DE NAVEGACIÓN (NAVBAR) */
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2.5rem;
+  height: 80px;
+  background-color: var(--fx-white);
+  border-bottom: 1px solid var(--fx-border);
+  font-family: var(--fx-font);
+  
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* --- SECCIÓN IZQUIERDA: LOGO Y MARCA --- */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.logo-icon {
+  background-color: var(--fx-primary);
+  color: white;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.logo-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--fx-text);
+}
+
+/* --- SECCIÓN CENTRAL: ENLACES DE RUTAS --- */
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+  height: 100%;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--fx-muted);
+  font-weight: 500;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-bottom-color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--fx-text);
+}
+
+.nav-link.active {
+  color: var(--fx-text);
+  font-weight: 600;
+  border-bottom-color: var(--fx-text);
+}
+
+/* --- SECCIÓN DERECHA: SOPORTE, AUTH Y USUARIO --- */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.support-text {
+  color: var(--fx-muted);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.auth-links {
+  display: flex;
+  gap: 1rem;
+  border-left: 1px solid var(--fx-border);
+  padding-left: 1.5rem;
+}
+
+.nav-auth-link {
+  text-decoration: none;
+  color: #4B5563;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.nav-auth-link.highlight {
+  color: var(--fx-primary);
+  font-weight: 600;
+}
+
+/* Espacio reservado temporal (Mock) para el avatar cuando haya sesión iniciada */
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  background-color: var(--fx-border);
+  border-radius: 50%;
+}
+
+/* MENÚ DESPLEGABLE DEL USUARIO (DROPDOWN) */
+.user-menu-container {
+  position: relative;
+  margin-left: 1.5rem;
+  padding-left: 1.5rem;
+  border-left: 1px solid var(--fx-border);
+}
+
+.user-avatar-btn {
+  width: 36px;
+  height: 36px;
+  background-color: var(--fx-primary);
+  color: var(--fx-white);
+  border: none;
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.user-avatar-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 6px rgba(36, 98, 233, 0.2);
+}
+
+/* La caja flotante del menú */
+.dropdown-menu {
+  position: absolute;
+  top: 120%; /* Se coloca justo debajo del avatar */
+  right: 0;
+  background-color: var(--fx-white);
+  width: 220px;
+  border: 1px solid var(--fx-border);
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0;
+  z-index: 1001;
+}
+
+.dropdown-header {
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-header strong {
+  font-size: 0.9rem;
+  color: var(--fx-text);
+}
+
+.dropdown-header span {
+  font-size: 0.75rem;
+  color: var(--fx-muted);
+}
+
+.dropdown-menu hr {
+  border: none;
+  border-top: 1px solid var(--fx-border);
+  margin: 0.5rem 0;
+}
+
+.dropdown-item {
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: #374151;
+  font-size: 0.875rem;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.dropdown-item:hover {
+  background-color: var(--fx-bg);
+  color: var(--fx-text);
+}
+
+.text-danger {
+  color: #DC2626 !important;
+}
+
+.text-danger:hover {
+  background-color: #FEF2F2;
+}
+
+/* FixIT — identidad visual */
+
+.navbar { padding:0 clamp(16px,3vw,44px); gap:20px; box-shadow:0 2px 12px rgba(24,34,53,.035); }
+.navbar .logo-icon { width:38px; height:38px; border-radius:11px; font-size:19px; }
+.navbar .logo-text { font-size:24px; letter-spacing:-.06em; font-weight:700; }
+.navbar .nav-link.active,.navbar .nav-link:hover { color:var(--fx-primary); border-bottom-color:var(--fx-primary); }
+.navbar .navbar-links { gap:clamp(12px,2vw,28px); }
+.navbar .nav-auth-link.highlight { background:var(--fx-primary); color:white; padding:10px 14px; border-radius:10px; }
+.navbar .nav-auth-link.highlight:hover { background:var(--fx-primary-hover); }
+@media(max-width:1050px){ .navbar .support-text { display:none; } .navbar .navbar-right { gap:12px; } .navbar .auth-links { padding-left:0; border:0; align-items:center; } }
+@media(max-width:780px){ .navbar { height:auto; min-height:72px; flex-wrap:wrap; padding:12px 16px 0; gap:8px; } .navbar .navbar-links { order:3; width:100%; overflow-x:auto; height:44px; gap:20px; } .navbar .nav-link { white-space:nowrap; font-size:12px; } .navbar .user-menu-container { margin-left:0; padding-left:0; border:0; } .navbar .navbar-right { margin-left:auto; } .navbar .logo-text { font-size:21px; } .navbar .nav-auth-link { font-size:12px; } }
+

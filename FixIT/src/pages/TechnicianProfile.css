@@ -1,0 +1,228 @@
+@import './fixit-theme.css';
+
+/* VISTA: PERFIL DETALLADO DEL TÉCNICO */
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+
+.profile-card {
+  background-color: var(--fx-surface);
+  width: 100%;
+  max-width: 750px;
+  padding: 2.5rem;
+  border-radius: var(--fx-r-md);
+  border: 1px solid var(--fx-border);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+/* --- BOTÓN DE VOLVER --- */
+.btn-back {
+  background: none;
+  border: none;
+  color: var(--fx-text-2);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: color 0.2s;
+}
+
+.btn-back:hover {
+  color: var(--fx-text);
+}
+.profile-avatar-large {
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.profile-avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+/* --- CABECERA (FOTO Y TÍTULO) --- */
+.profile-header {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.profile-avatar-large {
+  width: 120px;
+  height: 120px;
+  background-color: var(--fx-bg-soft);
+  border: 2px dashed var(--fx-border-strong);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--fx-text-3);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.profile-title-area {
+  flex: 1;
+}
+
+.profile-title-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile-title-row h2 {
+  font-size: 1.75rem;
+  color: var(--fx-text);
+  margin: 0;
+}
+
+.profile-specialty {
+  font-size: 1.1rem;
+  color: var(--fx-text);
+  margin-bottom: 0.5rem;
+}
+
+.profile-location {
+  font-size: 0.9rem;
+  color: var(--fx-text-2);
+  font-weight: 500;
+}
+
+/* --- GRILLA DE ESTADÍSTICAS --- */
+.profile-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-box {
+  background-color: var(--fx-bg-soft);
+  border: 1px solid var(--fx-border);
+  border-radius: var(--fx-r-sm);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.stat-value {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--fx-text);
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--fx-text-2);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.profile-divider {
+  border: none;
+  border-top: 1px solid var(--fx-border);
+  margin-bottom: 2rem;
+}
+
+/* --- CONTENIDO (BIOGRAFÍA Y CERTIFICADOS) --- */
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.content-section h3 {
+  font-size: 1.15rem;
+  color: var(--fx-text);
+  margin-bottom: 1rem;
+}
+
+.content-section p {
+  font-size: 0.95rem;
+  color: var(--fx-text-2);
+  line-height: 1.6;
+}
+
+.certifications-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.certifications-list li {
+  font-size: 0.95rem;
+  color: var(--fx-text);
+  background-color: var(--fx-bg-soft);
+  padding: 0.75rem 1rem;
+  border-radius: var(--fx-r-sm);
+  border: 1px solid var(--fx-border);
+}
+
+/* --- FOOTER (TARIFA Y BOTÓN) --- */
+.profile-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--fx-bg-soft);
+  padding: 1.5rem;
+  border-radius: var(--fx-r-md);
+  border: 1px solid var(--fx-border);
+}
+
+.price-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-label {
+  font-size: 0.85rem;
+  color: var(--fx-text-2);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.price-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--fx-primary);
+}
+
+.profile-footer .btn-primary {
+  padding: 1rem 2.5rem;
+  font-size: 1.05rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .profile-title-row {
+    flex-direction: column;
+  }
+  .profile-stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .profile-footer {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .profile-footer .btn-primary {
+    width: 100%;
+  }
+}

@@ -1,0 +1,45 @@
+/* COMPONENTE: FOOTER GLOBAL */
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.global-footer {
+  border-top: 1px solid var(--fx-border);
+  padding: 2rem 2.5rem;
+  background-color: transparent;
+  margin-top: auto; 
+}
+
+/* --- CONTENIDO INTERNO --- */
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--fx-muted);
+  font-size: 0.875rem;
+}
+
+/* --- ENLACES DEL FOOTER --- */
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  color: var(--fx-muted);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out; /* Transición suave */
+}
+
+/* Efecto hover */
+.footer-links a:hover {
+  color: #4B5563; /* Un gris un poco más oscuro para mejor contraste */
+}
+
+/* FixIT — identidad visual */
+
+.global-footer { background:var(--fx-white); }
+.global-footer .footer-content,.global-footer .footer-links a { color:var(--fx-muted); }
+.global-footer .footer-links a:hover { color:var(--fx-primary); }
+@media(max-width:640px){ .global-footer { padding:24px 16px; } .global-footer .footer-content { flex-direction:column; align-items:flex-start; gap:16px; } .global-footer .footer-links { flex-wrap:wrap; gap:12px; } }
+

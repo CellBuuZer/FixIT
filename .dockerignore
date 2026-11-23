@@ -1,0 +1,15 @@
+**/node_modules
+**/.env
+**/.env.*
+!**/.env.example
+!FixIT/.env.production
+FixIT/dist
+fixit-backend/uploads/*
+!fixit-backend/uploads/.gitkeep
+.git
+.postman
+postman
+**/*.log
+**/.DS_Store
+Dockerfile
+.dockerignore

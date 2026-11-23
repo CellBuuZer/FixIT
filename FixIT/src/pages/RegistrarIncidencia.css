@@ -1,0 +1,160 @@
+@import './fixit-theme.css';
+
+/* VISTA: REGISTRO DE INCIDENCIA */
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.incidencia-container {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+
+.incidencia-card {
+  background-color: var(--fx-surface);
+  width: 100%;
+  max-width: 650px;
+  padding: 2.5rem;
+  border-radius: var(--fx-r-md);
+  border: 1px solid var(--fx-border);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+/* --- CABECERA --- */
+.incidencia-header {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--fx-border);
+  padding-bottom: 1.5rem;
+}
+
+.incidencia-header h2 {
+  font-size: 1.5rem;
+  color: var(--fx-text);
+  margin-bottom: 0.5rem;
+}
+
+.incidencia-header p {
+  color: var(--fx-text-2);
+  font-size: 0.95rem;
+}
+
+/* ESTILOS DE LOS CAMPOS (INPUTS/SELECTS) */
+.incidencia-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--fx-text);
+}
+
+.form-group select,
+.form-group textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--fx-border-strong);
+  border-radius: var(--fx-r-sm);
+  font-size: 0.95rem;
+  color: var(--fx-text);
+  background-color: var(--fx-surface);
+  font-family: var(--fx-font);
+  transition: border-color 0.2s;
+  width: 100%;
+  box-sizing: border-box; 
+}
+
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--fx-primary);
+}
+
+/* CONTROL DEL TAMAÑO DEL ÁREA DE DESCRIPCIÓN */
+.form-group textarea {
+  resize: none;
+  height: 120px;
+  min-height: 120px;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.select-wrapper select {
+  cursor: pointer;
+  appearance: auto;
+}
+
+/* --- CONTADOR DE CARACTERES --- */
+.char-counter {
+  text-align: right;
+  font-size: 0.75rem;
+  color: var(--fx-text-2);
+  margin-top: -0.25rem;
+}
+
+/* ZONA DE CARGA DE ARCHIVOS (DRAG & DROP) */
+.upload-area {
+  border: 2px dashed var(--fx-border-strong);
+  border-radius: var(--fx-r-sm);
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--fx-bg-soft);
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.upload-area:hover {
+  background-color: var(--fx-bg-soft);
+  border-color: var(--fx-border-strong);
+}
+
+.upload-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.upload-area p {
+  color: var(--fx-text);
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.upload-area small {
+  color: var(--fx-text-2);
+  font-size: 0.8rem;
+}
+
+/* BOTONES INFERIORES */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.btn-secondary {
+  background-color: var(--fx-surface);
+  color: var(--fx-text);
+  border: 1px solid var(--fx-border-strong);
+  padding: 0.875rem 1.5rem;
+  border-radius: var(--fx-r-sm);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: var(--fx-bg-soft);
+}
+
+.form-actions .btn-primary {
+  padding: 0.875rem 2rem;
+}
